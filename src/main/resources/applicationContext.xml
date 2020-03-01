@@ -13,5 +13,9 @@
 	   http://www.springframework.org/schema/tx
 	   http://www.springframework.org/schema/tx/spring-tx.xsd">
 
-
+    <!-- spring管理service和dao层的注解, springmvc管理controller层注解-->
+    <context:component-scan base-package="org.windlike">
+        <!-- spring忽略控制层注解 -->
+        <context:exclude-filter type="annotation" expression="org.springframework.stereotype.Controller"/>
+    </context:component-scan>
 </beans>

@@ -28,17 +28,22 @@ public class MainTest {
         // 创建需要写入的数据列表
         List<ExcelDataVO> dataVOList = new ArrayList<>(2);
         ExcelDataVO dataVO = new ExcelDataVO();
-        dataVO.setName("小明");
-        dataVO.setAge(18);
+        dataVO.setName("杨小明");
+        dataVO.setAge(19);
         dataVO.setLocation("广州");
-        dataVO.setJob("大学生");
+        dataVO.setJob("硕士生");
         ExcelDataVO dataVO2 = new ExcelDataVO();
-        dataVO2.setName("小花");
-        dataVO2.setAge(19);
+        dataVO2.setName("柳小花");
+        dataVO2.setAge(22);
         dataVO2.setLocation("深圳");
-        dataVO2.setJob("大学生");
+        dataVO2.setJob("博士生");
+        ExcelDataVO dataVO3 = new ExcelDataVO();
+        dataVO3.setName("Java");
+        dataVO3.setAge(21);
+        dataVO3.setJob("算法工程师");
         dataVOList.add(dataVO);
         dataVOList.add(dataVO2);
+        dataVOList.add(dataVO3);
 
         // 写入数据到工作簿对象内
         Workbook workbook = ExcelWriter.exportData(dataVOList);

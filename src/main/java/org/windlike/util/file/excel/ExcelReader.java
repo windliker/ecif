@@ -21,7 +21,7 @@ public class ExcelReader {
     // 日志打印
     private static Logger logger = Logger.getLogger(ExcelReader.class.getName());
     private static final String XLS = "xls";
-    private static  final String XLSX = "xlsx";
+    private static final String XLSX = "xlsx";
 
     public static Workbook getWorkbook(InputStream inputStream, String fileType) throws IOException {
         Workbook workbook = null;
@@ -187,7 +187,7 @@ public class ExcelReader {
             resultData.setAge(Integer.parseInt(ageStr));
         }
         // 获取居住地
-        cell  = row.getCell(cellNum++);
+        cell = row.getCell(cellNum++);
         String location = convertCellValueToString(cell);
         resultData.setLocation(location);
         // 获取职业
