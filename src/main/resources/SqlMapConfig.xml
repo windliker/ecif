@@ -1,10 +1,11 @@
+<!--
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE configuration
         PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-config.dtd">
 <configuration>
 
-    <!-- 配置数据库 -->
+    &lt;!&ndash; 配置数据库 &ndash;&gt;
     <environments default="mysql">
         <environment id="mysql">
             <transactionManager type="JDBC"></transactionManager>
@@ -16,9 +17,9 @@
             </dataSource>
         </environment>
     </environments>
-    
-    <!-- 加载映射文件 -->
+
+    &lt;!&ndash; 加载映射文件 &ndash;&gt;
     <mappers>
         <package name="org.windlike.dao"/>
     </mappers>
-</configuration>
+</configuration>-->

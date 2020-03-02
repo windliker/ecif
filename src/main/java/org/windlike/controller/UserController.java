@@ -2,8 +2,12 @@ package org.windlike.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.windlike.entity.User;
 import org.windlike.service.UserService;
+
+import java.util.List;
 
 @Controller
 @RequestMapping("/user")
@@ -71,11 +75,19 @@ public class UserController {
         this.userService = userService;
     }
 
-    @RequestMapping("queryUsers")
-    public String queryUsers() {
+    @RequestMapping("/queryUsers")
+    public String queryUsers(Model model) {
         System.out.println("controller查询一组数据");
         // 使用注入的userService对象
-        userService.queryUsers();
+        List<User> users = userService.queryUsers();
+        model.addAttribute("users", users);
+        return "success";
+    }
+
+    @RequestMapping("/addUser")
+    public String addUser(User user) {
+        System.out.println("controller新增一条数据");
+        userService.addUser(user);
         return "success";
     }
 }
