@@ -8,10 +8,10 @@
     &lt;!&ndash; 配置数据库 &ndash;&gt;
     <environments default="mysql">
         <environment id="mysql">
-            <transactionManager type="JDBC"></transactionManager>
+            <transactionManager type="JDBC"/>
             <dataSource type="POOLED">
                 <property name="driver" value="com.mysql.jdbc.Driver"/>
-                <property name="url" value="jdbc:mysql://localhost:3306/ecif"/>
+                <property name="url" value="jdbc:mysql://127.0.0.1:3306/ecif"/>
                 <property name="username" value="root"/>
                 <property name="password" value="root"/>
             </dataSource>
@@ -22,4 +22,5 @@
     <mappers>
         <package name="org.windlike.dao"/>
     </mappers>
-</configuration>-->
+</configuration>
+-->

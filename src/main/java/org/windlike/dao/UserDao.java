@@ -10,7 +10,7 @@ import java.util.List;
 @Repository
 public interface UserDao {
 
-    @Insert("insert into user(name, age) values(#{name}, #{age})")
+    @Insert("insert into user(id, username, age) values(#{id}, #{username}, #{age})")
     public void addUser(User user);
 
     @Select("select * from user")

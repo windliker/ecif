@@ -26,8 +26,9 @@ public class DaoTest {
         UserDao dao = session.getMapper(UserDao.class);
         // 5.调用方法
         User user = new User();
-        user.setName("范闲");
-        user.setAge(20);
+        user.setId("uuid20200308001");
+        user.setUsername("范闲");
+        user.setAge("20");
         dao.addUser(user);
         // 6.提交事务
         session.commit();
